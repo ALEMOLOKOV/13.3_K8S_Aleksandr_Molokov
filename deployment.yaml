@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-12.8
+  labels:
+    app: deployment-12.8
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deployment-12.8
+  template:
+    metadata:
+      labels:
+        app: deployment-12.8
+    spec:
+      containers:
+      - image: nginx:1.19.2
+        name: nginx
+        imagePullPolicy: IfNotPresent
+      - image: wbitt/network-multitool
+        name: multitool
+        imagePullPolicy: IfNotPresent
+        env:
+          - name: HTTP_PORT
+            valueFrom:
+              configMapKeyRef:
+                name: first-configmap
+                key: key1
+          - name: HTTPS_PORT
+            valueFrom:
+              configMapKeyRef:
+                name: first-configmap
+                key: key2
