@@ -60,22 +60,24 @@ ConfigMap.
 
 Взяд Deployment c предыдущего задания, подключил страницу через ConfigMap.
 
-#### ![Deployment-nginx]()
+#### ![Deployment-nginx](https://github.com/ALEMOLOKOV/13.3_K8S_Aleksandr_Molokov/blob/5b56c5ab22892e5951b7712ebb7b1cfb5d005a2a/deploy-nginx.yaml)
 
-#### ![ConfigMap]()
+#### ![ConfigMap](https://github.com/ALEMOLOKOV/13.3_K8S_Aleksandr_Molokov/blob/5b56c5ab22892e5951b7712ebb7b1cfb5d005a2a/configmap-nginx.yaml)
 
 #### Выпуск SSL - openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout tls.key -out tls.crt -subj "/CN=amolokov.com"
 
 ![cert and key](https://github.com/ALEMOLOKOV/13.3_K8S_Aleksandr_Molokov/assets/109212419/3290ee2e-45e1-45bd-a9f3-4fa13ed6881a)
 
 
-#### ![Secret]()
+#### ![Secret](https://github.com/ALEMOLOKOV/13.3_K8S_Aleksandr_Molokov/blob/5b56c5ab22892e5951b7712ebb7b1cfb5d005a2a/secret-nginx.yaml)
+
+#### ![service](https://github.com/ALEMOLOKOV/13.3_K8S_Aleksandr_Molokov/blob/5b56c5ab22892e5951b7712ebb7b1cfb5d005a2a/svc-nginx.yaml)
 
 #### Состояние объектов
 
 ![состояние](https://github.com/ALEMOLOKOV/13.3_K8S_Aleksandr_Molokov/assets/109212419/b0f1a8ea-af20-4859-aca2-3ea698297db6)
 
-#### Добавид в файл hosts - amolokov.com
+#### Добавил в файл hosts - amolokov.com
 
 ![добавление dnc в hosts](https://github.com/ALEMOLOKOV/13.3_K8S_Aleksandr_Molokov/assets/109212419/d0e11591-4450-4ffa-a5fe-82e0de69dd50)
 
