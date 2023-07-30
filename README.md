@@ -11,6 +11,8 @@
 ### Ответ
 
 ### Задания 1-3
+Создание Deployment приложения nginx и multitool. Создание ConfigMap в формате ключ:значение, значения переменных (номера портов) беруться из 
+ConfigMap.
 
 #### ![Deployment](https://github.com/ALEMOLOKOV/13.3_K8S_Aleksandr_Molokov/blob/4d8556ca6fcef1e4437d186e400d8edda26110f0/deployment.yaml)
 
@@ -20,7 +22,10 @@
 
 ![под поднялся все работает](https://github.com/ALEMOLOKOV/13.3_K8S_Aleksandr_Molokov/assets/109212419/cae04a39-ab1a-47d5-8054-19e5b1407669)
 
+
+
 ### Задания 4-5
+Сщздание отдельного Deployment  с nginx, ConfigMap подключает страницу к nginx.
 
 #### ![Deployment](https://github.com/ALEMOLOKOV/13.3_K8S_Aleksandr_Molokov/blob/4d8556ca6fcef1e4437d186e400d8edda26110f0/deploy-nginx.yaml)
 
@@ -35,6 +40,8 @@
 #### Curl
 
 ![curl html](https://github.com/ALEMOLOKOV/13.3_K8S_Aleksandr_Molokov/assets/109212419/e4ff4070-f1d8-4e6c-b4e2-ab9d5bfa2fc0)
+
+![http 51 250 101 159_31150](https://github.com/ALEMOLOKOV/13.3_K8S_Aleksandr_Molokov/assets/109212419/27ca7182-001c-482d-a453-30582d3c2a56)
 
 
 
@@ -51,3 +58,27 @@
 
 ### Ответ
 
+Взяд Deployment c предыдущего задания, подключил страницу через ConfigMap.
+
+#### ![Deployment-nginx]()
+
+#### ![ConfigMap]()
+
+#### Выпуск SSL - openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout tls.key -out tls.crt -subj "/CN=amolokov.com"
+
+![cert and key](https://github.com/ALEMOLOKOV/13.3_K8S_Aleksandr_Molokov/assets/109212419/3290ee2e-45e1-45bd-a9f3-4fa13ed6881a)
+
+
+#### ![Secret]()
+
+#### Состояние объектов
+
+![состояние](https://github.com/ALEMOLOKOV/13.3_K8S_Aleksandr_Molokov/assets/109212419/b0f1a8ea-af20-4859-aca2-3ea698297db6)
+
+#### Добавид в файл hosts - amolokov.com
+
+![добавление dnc в hosts](https://github.com/ALEMOLOKOV/13.3_K8S_Aleksandr_Molokov/assets/109212419/d0e11591-4450-4ffa-a5fe-82e0de69dd50)
+
+#### Curl
+
+![curl amolokov com](https://github.com/ALEMOLOKOV/13.3_K8S_Aleksandr_Molokov/assets/109212419/a7194786-7cf2-4a74-a45c-c3441ee1323f)
