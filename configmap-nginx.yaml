@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-conf
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html>
+     <head>
+      <title>MY FIRST SITE</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+     </head>
+     <body>
+
+      <h1>MY FIRTS SITE</h1>
+
+      <h1>HELLO EVERYONE!!!</h1>
+      <p>HOW ARE YOU?</p>
+
+     </body>
+    </html>
